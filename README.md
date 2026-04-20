@@ -18,3 +18,11 @@ View your app in AI Studio: https://ai.studio/apps/bf0af3e7-9549-4afd-ab17-99539
 2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
 3. Run the app:
    `npm run dev`
+
+## Deployment
+
+This repository is configured to automatically deploy to GitHub Pages upon pushing to the `main` branch.
+
+1. Ensure the `base` in `vite.config.ts` accurately matches the repository name (currently configured as `base: '/Total-Wealth-Homepage/'`).
+2. Give the Actions the necessary Read and Write permissions for GitHub Pages in your repository Settings > Pages.
+3. Push to `main` and the GitHub Actions flow `.github/workflows/deploy.yml` will build and publish your Vite application.
